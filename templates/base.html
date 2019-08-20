@@ -7,8 +7,10 @@
     {% else %}
     <title>FintronX LED User Dashboard</title>
     {% endif %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='dashboard.css') }}">
   </head>
-  <body>
+  <body id="bootstrap-overrides">
     <div>
       Fintronx LED Dashboard:
       {% if current_user.is_anonymous %}

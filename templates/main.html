@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block content%}
-  <h1>Welcome, {{  current_user.name  }}</h1>  
+  <h2 class = 'mb-4'>Welcome, {{  current_user.name  }}</h2>
+  <div class = 'row'>
+    <div class="col-sm-4 text-center">
+      <a href = "https://app.powerbi.com/view?r=eyJrIjoiODQxZmQ1ZmMtOGE2NS00NTQyLTgwNzQtYTM1MWFhYmQ1M2U4IiwidCI6IjAxNTg3MTRiLTc0YTMtNDM1OS05YjhkLTlmYjQ5NGJlZWE0MSIsImMiOjF9"
+        class = 'labeltext'>View Report Here</a>
+      <img class = 'img-thumbnail mt-3 mb-3' src="static/YearlyComparison.png" alt="Report Thumbnail">
+    </div>
+    <div class="col-sm-4 text-center">
+      <a href = "https://app.powerbi.com/view?r=eyJrIjoiMDQwZDA0N2ItZjRkMS00ZTRmLTlkZDYtNDQ5OGJiZmI0ZGJlIiwidCI6IjAxNTg3MTRiLTc0YTMtNDM1OS05YjhkLTlmYjQ5NGJlZWE0MSIsImMiOjF9"
+        class = 'labeltext'>View Report Here</a>
+      <img class = 'img-thumbnail mt-3' src="static/SalesBySalesPerson.png" alt="Report Thumbnail">
+    </div>
+    <div class="col-sm-4 text-center">
+      <a href = "https://app.powerbi.com/view?r=eyJrIjoiODQxZmQ1ZmMtOGE2NS00NTQyLTgwNzQtYTM1MWFhYmQ1M2U4IiwidCI6IjAxNTg3MTRiLTc0YTMtNDM1OS05YjhkLTlmYjQ5NGJlZWE0MSIsImMiOjF9"
+        class = 'labeltext'>View Report Here</a>
+      <img class = 'img-thumbnail mt-3' src="static/YearlyComparison.png" alt="Report Thumbnail">
+    </div
+
+  </div>
 {% endblock %}

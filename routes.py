@@ -5,10 +5,6 @@ from flask_login import current_user, login_user, logout_user, login_required
 from models import User
 from werkzeug.urls import url_parse
 
-@app.route("/")
-def chart():
-    return render_template("chart.html")
-
 #view for login screen
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -38,3 +34,6 @@ def logout():
 @login_required
 def main():
     return render_template('main.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)
