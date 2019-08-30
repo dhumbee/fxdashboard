@@ -6,7 +6,7 @@ from models import User
 from werkzeug.urls import url_parse
 
 #view for login screen
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('main'))
