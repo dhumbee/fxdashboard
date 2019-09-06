@@ -1,35 +1,36 @@
 {% extends "base.html" %}
 
 {% block content%}
-  <h1 class = 'test'>Welcome, Please Sign In</h1>
-  <form action="" method="post">
+<h1 class = 'test'>Welcome, Please Sign In</h1>
+<form action="" method="post">
 
-    {{  form.hidden_tag()  }}
+  {{  form.hidden_tag()  }}
 
-    <p>
-      {{  form.email.label  }}<br>
-      {{  form.email(size=60)  }}<br>
-      {% for error in form.email.errors %}
-        <span style = 'color: red;'>[{{  error  }}]</span>
-      {% endfor %}
-    </p>
+  <p>
+    {{  form.email.label  }}<br>
+    {{  form.email(size=50)  }}<br>
+    {% for error in form.email.errors %}
+      <span style = 'color: red;'>[{{  error  }}]</span>
+    {% endfor %}
+  </p>
 
-    <p>
-      {{  form.password.label  }}<br>
-      {{  form.password(size=60)  }}<br>
-      {% for error in form.password.errors %}
-        <span style = 'color: red;'>[{{  error  }}]</span>
-      {% endfor %}
-    </p>
+  <p>
+    {{  form.password.label  }}<br>
+    {{  form.password(size=50)  }}<br>
+    {% for error in form.password.errors %}
+      <span style = 'color: red;'>[{{  error  }}]</span>
+    {% endfor %}
+  </p>
 
-    <p>
-      {{  form.rememberMe()  }}  {{  form.rememberMe.label  }}<br>
-    </p>
+  <p>
+    {{  form.rememberMe()  }}  {{  form.rememberMe.label  }}<br>
+  </p>
 
-    <p>
-      {{  form.submit()  }}
-    </p>
+  <p>
+    {{  form.submit()  }}
+  </p>
 
-  </form>
+</form>
+
 
 {% endblock %}

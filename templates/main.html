@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 
 {% block content%}
-  <h2 class = 'mb-4'>Welcome, {{  current_user.name  }}</h2>
+  <!--welcome user full row-->
+  <div class = 'row'>
+    <p class = 'labeltext mb-5'>Welcome to your Fintronx dashboard, {{  current_user.name  }}</p>
+  </div>
+  <!--report content and links-->
   <div class = 'row'>
     <div class="col-sm-4 text-center">
       <a href = "https://app.powerbi.com/view?r=eyJrIjoiODQxZmQ1ZmMtOGE2NS00NTQyLTgwNzQtYTM1MWFhYmQ1M2U4IiwidCI6IjAxNTg3MTRiLTc0YTMtNDM1OS05YjhkLTlmYjQ5NGJlZWE0MSIsImMiOjF9"
-        class = 'labeltext'>View Report Here</a>
+        class = 'labeltext'>View Yearly Comparison Report</a>
       <img class = 'img-thumbnail mt-3 mb-3' src="static/YearlyComparison.png" alt="Report Thumbnail">
     </div>
     <div class="col-sm-4 text-center">
       <a href = "https://app.powerbi.com/view?r=eyJrIjoiMDQwZDA0N2ItZjRkMS00ZTRmLTlkZDYtNDQ5OGJiZmI0ZGJlIiwidCI6IjAxNTg3MTRiLTc0YTMtNDM1OS05YjhkLTlmYjQ5NGJlZWE0MSIsImMiOjF9"
-        class = 'labeltext'>View Report Here</a>
-      <img class = 'img-thumbnail mt-3' src="static/SalesBySalesPerson.png" alt="Report Thumbnail">
+        class = 'labeltext'>Sales By Person & Product</a>
+      <img class = 'img-thumbnail mt-3' src="static/SalesBySalesPerson.PNG" alt="Report Thumbnail">
     </div>
     <div class="col-sm-4 text-center">
       <a href = "https://app.powerbi.com/view?r=eyJrIjoiODQxZmQ1ZmMtOGE2NS00NTQyLTgwNzQtYTM1MWFhYmQ1M2U4IiwidCI6IjAxNTg3MTRiLTc0YTMtNDM1OS05YjhkLTlmYjQ5NGJlZWE0MSIsImMiOjF9"
         class = 'labeltext'>View Report Here</a>
       <img class = 'img-thumbnail mt-3' src="static/YearlyComparison.png" alt="Report Thumbnail">
-    </div
-
+    </div>
   </div>
 {% endblock %}

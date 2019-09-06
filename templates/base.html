@@ -5,30 +5,41 @@
     {% if title %}
     <title>{{  title  }}</title>
     {% else %}
-    <title>FintronX LED User Dashboard</title>
+    <title>Fintronx LED Dashboard</title>
     {% endif %}
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='dashboard.css') }}">
   </head>
   <body id="bootstrap-overrides">
-    <div>
-      Fintronx LED Dashboard:
-      {% if current_user.is_anonymous %}
-      <a href = "{{  url_for('login')  }}">Home</a>
-      {% else %}
-      <a href = "{{  url_for('logout')  }}">Logout</a>
+    <div class = "container">
+      <!--upper row logo and home/logout links-->
+      <div class = "row">
+        <div class = "col-4">
+          <img class = img-fluid src = "static\Fintronx_LED_Logo_Color_Transparent.png" alt = "Fintronx Logo">
+        </div>
+        <div class = "col-8 text-center align-bottom">
+          {% if current_user.is_anonymous %}
+          <a href = "{{  url_for('login')  }}" class = "labeltext">Home</a>
+          {% else %}
+          <a href = "{{  url_for('logout')  }}">Logout</a>
+          {% endif %}
+        </div>
+      </div>
+      <!--main content row, beginning of block content-->
+      <div class = "row mt-4">
+        {% block content %}{% endblock %}
+      </div>
+      <hr>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li>{{  message  }}</li>
+        {% endfor %}
+      </ul>
       {% endif %}
+      {% endwith %}
+      </hr>
     </div>
-    <hr>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul>
-      {% for message in messages %}
-      <li>{{  message  }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-    {% block content %}{% endblock %}
   </body>
 </html>
