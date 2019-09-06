@@ -17,11 +17,11 @@
         <div class = "col-4">
           <img class = img-fluid src = "static\Fintronx_LED_Logo_Color_Transparent.png" alt = "Fintronx Logo">
         </div>
-        <div class = "col-8 text-center align-bottom">
+        <div class = "col-8 d-flex">
           {% if current_user.is_anonymous %}
           <a href = "{{  url_for('login')  }}" class = "labeltext">Home</a>
           {% else %}
-          <a href = "{{  url_for('logout')  }}">Logout</a>
+          <a href = "{{  url_for('logout')  }}" class = "labeltext">Logout</a>
           {% endif %}
         </div>
       </div>
