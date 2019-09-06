@@ -19,9 +19,9 @@
         </div>
         <div class = "col-8 d-flex">
           {% if current_user.is_anonymous %}
-          <a href = "{{  url_for('login')  }}" class = "labeltext">Home</a>
+          <a href = "{{  url_for('login')  }}" class = "align-self-end labeltext">Home</a>
           {% else %}
-          <a href = "{{  url_for('logout')  }}" class = "labeltext">Logout</a>
+          <a href = "{{  url_for('logout')  }}" class = "align-self-end labeltext">Logout</a>
           {% endif %}
         </div>
       </div>
